@@ -17,5 +17,5 @@ RUN apt-get install libsdl2-dev libncurses5-dev libx11-dev libxext-dev -y
 RUN sudo	apt-get	remove	bochs
 RUN wget https://sourceforge.net/projects/bochs/files/bochs/2.6.11/bochs-2.6.11.tar.gz/download -O bochs.tar.gz  && tar -xvf bochs.tar.gz
 RUN cd bochs-2.6.11 && sh .conf.linux --enable-gdb-stub
-RUN cd bochs-2.6.11 && make -j && make install
+RUN cd bochs-2.6.11 && make -j1 && make install
 
